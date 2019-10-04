@@ -6,7 +6,7 @@ SAVE_LAP=$4
 OPTIMAL_START=$5
 SILENT_MODE=$6
 
-echo "\n\n************"
+echo "************"
 echo "Strategy: "$STRATEGY
 if [ "$OPTIMAL_START" = "true" ]; then
     echo "Optimal start enabled"
@@ -25,22 +25,20 @@ else
 fi
 echo "Total matches to create: "$(($NUM_PROCESSES * $NUM_CYCLES * 1296))
 echo "Databes will be updated each "$SAVE_LAP" matches"
-echo "Matches will be inside /csv folder"
 echo "Logs of matches will be inside /logs folder"
 mkdir logs
-mkdir csv
 
 ####################
 ELABORATION_ID=`date "+%Y%m%d_%H%M%S"`
-OUTPUT_PATH="./csv/"$STRATEGY"_"$ELABORATION_ID"_"
+OUTPUT_PATH="../database/dbPlayers/"$STRATEGY"/chest/"$STRATEGY"_"$ELABORATION_ID"_"
 echo "Note: the matches will be stored inside "$OUTPUT_PATH"N.csv"
-echo "************\n\n"
+echo "************"
 ####################
 
 for i in `seq 1 $NUM_PROCESSES`;
 do
     echo "Starting Nprocess="$i
-	python db_creator.py \
+	python -B db_creator.py \
 	        --strategy $STRATEGY \
 	        --output_path $OUTPUT_PATH$i".csv" \
 	        --cut_history_path $OUTPUT_PATH$i"_cuts.csv" \
