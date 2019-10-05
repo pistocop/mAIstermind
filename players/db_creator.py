@@ -1,4 +1,4 @@
-'''
+"""
 # Overview
 This script will create a .CSV with the history of the selected player for each password.
 The process submit each password to the player in a wheel-mode for each cycle:
@@ -16,17 +16,17 @@ output_path     = the match CSV path [string]
 cut_history_path = the history with cut stat CSV path [string]
 saving_lap      = system save the CSV each saving_lap matches [int]
 cycles          = how many cycle of all passwords test [int]
-optimal_start   = use optimal start AABB or not [if present--> use optimal start] 
+optimal_start   = use optimal start AABB or not [if present--> use optimal start]
 
 
 # Example
-python db_creator.py --strategy knuth 
-                    --output_path ./db_csv/test.csv 
+python db_creator.py --strategy knuth
+                    --output_path ./db_csv/test.csv
                     --cut_history_path ./db_csv/test_cuts.csv
-                    --saving_lap 1 
-                    --cycles 5 
+                    --saving_lap 1
+                    --cycles 5
                     --optimal_start
-'''
+"""
 
 import player
 import argparse
