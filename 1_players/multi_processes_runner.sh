@@ -30,7 +30,7 @@ mkdir logs
 
 ####################
 ELABORATION_ID=`date "+%Y%m%d_%H%M%S"`
-OUTPUT_PATH="../database/dbPlayers/"$STRATEGY"/chest/"$STRATEGY"_"$ELABORATION_ID"_"
+OUTPUT_PATH="../2_database/dbPlayers/"$STRATEGY"/chest/"$STRATEGY"_"$ELABORATION_ID"_"
 echo "Note: the matches will be stored inside "$OUTPUT_PATH"N.csv"
 echo "************"
 ####################
