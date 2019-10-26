@@ -1,0 +1,49 @@
+# General params
+NETWORK_TYPE, GOAL_TYPE = 'BiLSTM_AttentionSystem', 'goalReduced'
+LOGGING_TO_FILE = True
+
+# Debug params
+DEBUG_HOOK = False
+
+
+# Input params
+
+CSV_PATH_TRAIN = "../database/dbML/knuthFast/knuthFast_2019-07-30_0.9_75844_train.csv"
+CSV_PATH_EVAL = "../database/dbML/knuthFast/knuthFast_2019-07-30_0.9_8516_eval.csv"
+
+
+# Goal position
+GOAL_POS = 0 #[0-3]
+
+
+# Model dir
+MODEL_DIR_PATH = "model_dir_{}_{}".format(random_int, GOAL_POS)
+
+
+# Train params
+LEN_TRAIN_DB = 75844
+EPOCHS = 10
+ALPHA = 0.001
+
+
+# Network
+FW_FORGET_BIAS = 1
+BW_FORGET_BIAS = 1
+LSTM_SIZE = 256
+ATTENTION_SIZE = 256
+MAXOUT_SIZE = 256
+DROP_REPRESENTATION = 0.3 
+
+L2_ACTIVATED = True
+L2_SCALE = 0.001
+
+
+# Input 
+BATCH_TRAIN = 4
+MULTI_THREADING = True
+
+# Eval
+BATCH_EVAL = 4
+SHUFFLE_EVAL = True
+EVAL_STEPS = None
+NUM_EVALS = EPOCHS

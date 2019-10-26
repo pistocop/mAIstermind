@@ -2,12 +2,12 @@
 echo "This programm will launch 4 Training of bilstm_goalReduced"
 echo "One for each goal positions"
 
-TIMESTAMP=$(date "+%Y%m%d")
+TIMESTAMP=$(date "+%Y%m%d_%H%M")
 FAMILY_FOLDER="model_$TIMESTAMP"
 mkdir "$FAMILY_FOLDER"
 
-for i in $(seq 1 2); do
-  MODEL_NAME="$FAMILY_FOLDER_$i"
+for i in $(seq 0 3); do
+  MODEL_NAME="$FAMILY_FOLDER"_$i
   echo "Network $MODEL_NAME training..."
   papermill ../3_models/BiLSTM_goalReduced.ipynb ./BiLSTM_goalReduced_"$i".ipynb -p GOAL_POS "$i" -p MODEL_DIR_PATH "$MODEL_NAME"
   mv BiLSTM_goalReduced_"$i".ipynb "$MODEL_NAME"
