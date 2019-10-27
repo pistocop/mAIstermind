@@ -2,6 +2,7 @@
 .idea/
 *.csv
 model_dir_*/
+model_*
 
 
 # Byte-compiled / optimized / DLL files
