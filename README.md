@@ -15,7 +15,7 @@ To do this, this repository contains:
 - This is my first ML project and the first "big" project in a more general sense
 - I haven't changed anything from the exam submission, and I haven't plan to improve this package
 - **Keypoints**
-  - Mastermind players to build the dataset:
+  - Mastermind players to build the ML dataset:
     - _knuth_ - best algorithm, from [Knuth paper](http://www.cs.uni.edu/~wallingf/teaching/cs3530/resources/knuth-mastermind.pdf)
     - *knuth_fast* - my idea to speed-up knuth algorithm
     - *hopeful* - simple but fast algorithm
@@ -36,5 +36,5 @@ To do this, this repository contains:
 
      118M used in 3 directories, 6 files
     ```
-  - [Slides](/slides/Presentazione%20Mastermind.pdf) are available (in italian) for a deeper explanation of the project.
   - The trained models are 4 Bi-LSTM with attention System. They are written in Tensorflow using the [tf_estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator).
+  - [Slides](/slides/Presentazione%20Mastermind.pdf) are available (in italian) for a deeper explanation of the project.
