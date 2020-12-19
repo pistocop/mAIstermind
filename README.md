@@ -36,5 +36,9 @@ To do this, this repository contains:
 
      118M used in 3 directories, 6 files
     ```
-  - The trained models are 4 Bi-LSTM with attention System. They are written in Tensorflow using the [tf_estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator).
-  - [Slides](/slides/Presentazione%20Mastermind.pdf) are available (in italian) for a deeper explanation of the project.
+  - Machine learning models
+    - The model is a Bi-LSTM with attention system
+    - The model is written in Tensorflow using the [tf_estimator](https://www.tensorflow.org/api_docs/python/tf/estimator/Estimator) (TF2 was not released when I did the exam).
+    - For the best solution, 4 models were trained and used in cascade (see the slides)
+  - [Slides](/slides/Presentazione%20Mastermind.pdf) are available for a deeper explanation of the project.
+    - Although in Italian, they use a lot of images
